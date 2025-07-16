@@ -1,4 +1,4 @@
-const BackgroundWave = "/general/background-wave.svg";
+"use client";
 
 export function GradientBackground({
   className = "gradientOne",
@@ -12,7 +12,7 @@ export function GradientBackground({
       {/* SVG Background */}
       <div className="absolute inset-0 z-[1]">
         <img
-          src={BackgroundWave}
+          src="/general/background-wave.svg"
           alt=""
           className={`absolute ${svgPosition} left-0 w-full h-full object-cover`}
           style={{

@@ -1,11 +1,12 @@
+"use client";
 import { BannerSlider } from "./banner-slider";
 import LegacySection from "./legacy-section";
-import GridBackground from "@/components/main/GridBackground";
+import GridBackground from "@/components/ui/GridBackground";
 import RankingSection from "./Ranking";
 import Section from "@/layouts/section";
 import FiveYearPlanSection from "./fiveYearPlan";
 import UndergraduateAdmissions from "./UndergraduateAdmissions";
-import { GradientBackground } from "@/components/main/GradientBackground";
+import { GradientBackground } from "@/components/ui/gradient-background";
 import SetUsApart from "./SetUsApart";
 import StudentLife from "./StudentLife";
 import LatestNews from "./LatestNews";

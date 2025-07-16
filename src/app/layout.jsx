@@ -1,7 +1,9 @@
 import { Inter } from "next/font/google";
-import { SiteHeader } from "@/components/main/site-header";
-import SiteFooter from "@/components/main/site-footer";
+import { SiteHeader } from "@/header/site-header";
+import SiteFooter from "@/footer/site-footer";
 import "./globals.css";
+import Providers from "@/components/main/query-provider";
+import AdmissionQueryButton from "@/components/main/AdmissionQueryButton";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -12,11 +14,14 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <SiteHeader />
-        {children}
-        <SiteFooter />
+    <html lang="en" suppressHydrationWarning>
+      <body className={inter.className} suppressHydrationWarning>
+        <Providers>
+          <SiteHeader />
+          <main>{children}</main>
+          <AdmissionQueryButton />
+          <SiteFooter />
+        </Providers>
       </body>
     </html>
   );

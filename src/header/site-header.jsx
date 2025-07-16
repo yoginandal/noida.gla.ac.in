@@ -3,11 +3,7 @@ import { useState, useEffect } from "react";
 import { ChevronDown, Menu, X } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-
-const logo = "/logo/logo.png";
-const logoRes = "/logo/logo_res.png";
-const logoscrolled = "/logo/logo_scroll.png";
-const logoResScroll = "/logo/logo_scroll_res.png";
+import Image from "next/image";
 
 /**
  * TransparentSiteHeader Component
@@ -64,18 +60,8 @@ export function SiteHeader() {
   const [scrolled, setScrolled] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
-  const pathname = usePathname();
   const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-    window.addEventListener("resize", handleResize);
-    handleResize(); // Initial check
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
+  const pathname = usePathname();
   const isProgramPage = pathname.startsWith("/programs/");
   const isContactPage = pathname.startsWith("/contact-us");
   const isAboutPage = pathname.startsWith("/about");
@@ -83,6 +69,14 @@ export function SiteHeader() {
   const isAdvisoryBoardPage = pathname.startsWith("/advisory-board");
   const isAdmissionPage = pathname.startsWith("/admissions");
   const isPlacementsPage = pathname.startsWith("/placements");
+
+  useEffect(() => {
+    const checkIsMobile = () => setIsMobile(window.innerWidth < 768);
+    checkIsMobile();
+    window.addEventListener("resize", checkIsMobile);
+    return () => window.removeEventListener("resize", checkIsMobile);
+  }, []);
+
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
@@ -111,6 +105,30 @@ export function SiteHeader() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
+
+  const logoSrc = isMobile
+    ? isProgramPage ||
+      isContactPage ||
+      isAboutPage ||
+      isAwardsPage ||
+      isAdvisoryBoardPage ||
+      isAdmissionPage ||
+      isPlacementsPage
+      ? scrolled
+        ? "/logo/logo_scroll_res.png"
+        : "/logo/logo_res.png"
+      : "/logo/logo_scroll_res.png"
+    : isProgramPage ||
+      isContactPage ||
+      isAboutPage ||
+      isAwardsPage ||
+      isAdvisoryBoardPage ||
+      isAdmissionPage ||
+      isPlacementsPage
+    ? scrolled
+      ? "/logo/logo_scroll.png"
+      : "/logo/logo.png"
+    : "/logo/logo_scroll.png";
 
   return (
     <header
@@ -232,37 +250,15 @@ export function SiteHeader() {
         <div className="grid grid-cols-[auto_1fr] gap-4">
           {/* Logo */}
           <div className="flex items-center">
-            <Link href="/" className="flex items-center">
-              <img
-                src={
-                  isMobile
-                    ? isProgramPage ||
-                      isContactPage ||
-                      isAboutPage ||
-                      isAwardsPage ||
-                      isAdvisoryBoardPage ||
-                      isAdmissionPage ||
-                      isPlacementsPage
-                      ? scrolled
-                        ? logoResScroll
-                        : logoRes
-                      : logoResScroll
-                    : isProgramPage ||
-                      isContactPage ||
-                      isAboutPage ||
-                      isAwardsPage ||
-                      isAdvisoryBoardPage ||
-                      isAdmissionPage ||
-                      isPlacementsPage
-                    ? scrolled
-                      ? logoscrolled
-                      : logo
-                    : logoscrolled
-                }
+            <a href="/" className="flex items-center">
+              <Image
+                src={logoSrc}
                 alt="GLA logo"
                 className="md:h-24 h-20 mt-4 md:mt-0 w-auto"
+                width={200}
+                height={96}
               />
-            </Link>
+            </a>
           </div>
 
           {/* Right side content - Combined navigation and buttons */}

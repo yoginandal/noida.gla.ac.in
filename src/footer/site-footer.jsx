@@ -9,7 +9,7 @@ import {
   MapPin,
 } from "lucide-react";
 import Link from "next/link";
-const logo = "/logo/gla_logo.png";
+import Image from "next/image";
 
 /**
  * SiteFooter Component
@@ -101,10 +101,12 @@ const SiteFooter = () => {
                 className="flex items-center gap-3 group"
                 onClick={scrollToTop}
               >
-                <img
-                  src={logo}
+                <Image
+                  src={"/logo/gla_logo.png"}
                   alt="GLA University logo"
                   className="h-24 cursor-pointer w-auto transition-transform group-hover:scale-105"
+                  width={180}
+                  height={96}
                 />
                 <div className="flex flex-col"></div>
               </Link>
@@ -133,7 +135,7 @@ const SiteFooter = () => {
                   {
                     icon: Youtube,
                     label: "YouTube",
-                    href: "https://www.youtube.com/@glauniversity2879",
+                    href: "www.youtube.com/@glauniversity2879",
                   },
                 ].map((social, index) => {
                   const Icon = social.icon;

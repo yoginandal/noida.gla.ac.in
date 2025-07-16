@@ -288,27 +288,27 @@ export function TextAnimate({
         item: variants,
       }
     : animation
-      ? {
-          container: {
-            ...defaultItemAnimationVariants[animation].container,
-            show: {
-              ...defaultItemAnimationVariants[animation].container.show,
-              transition: {
-                delayChildren: delay,
-                staggerChildren: duration / segments.length,
-              },
-            },
-            exit: {
-              ...defaultItemAnimationVariants[animation].container.exit,
-              transition: {
-                staggerChildren: duration / segments.length,
-                staggerDirection: -1,
-              },
+    ? {
+        container: {
+          ...defaultItemAnimationVariants[animation].container,
+          show: {
+            ...defaultItemAnimationVariants[animation].container.show,
+            transition: {
+              delayChildren: delay,
+              staggerChildren: duration / segments.length,
             },
           },
-          item: defaultItemAnimationVariants[animation].item,
-        }
-      : { container: defaultContainerVariants, item: defaultItemVariants };
+          exit: {
+            ...defaultItemAnimationVariants[animation].container.exit,
+            transition: {
+              staggerChildren: duration / segments.length,
+              staggerDirection: -1,
+            },
+          },
+        },
+        item: defaultItemAnimationVariants[animation].item,
+      }
+    : { container: defaultContainerVariants, item: defaultItemVariants };
 
   return (
     <AnimatePresence mode="popLayout">
@@ -320,7 +320,8 @@ export function TextAnimate({
         exit="exit"
         className={cn("whitespace-pre-wrap", className)}
         viewport={{ once }}
-        {...props}>
+        {...props}
+      >
         {segments.map((segment, i) => (
           <motion.span
             key={`${by}-${segment}-${i}`}
@@ -330,7 +331,8 @@ export function TextAnimate({
               by === "line" ? "block" : "inline-block whitespace-pre",
               by === "character" && "",
               segmentClassName
-            )}>
+            )}
+          >
             {segment}
           </motion.span>
         ))}
