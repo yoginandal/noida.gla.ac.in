@@ -11,6 +11,7 @@ import SetUsApart from "./SetUsApart";
 import StudentLife from "./StudentLife";
 import LatestNews from "./LatestNews";
 import CampusShowcase from "./CampusShowcase";
+import { AdmissionQuery } from "@/components/main/AdmissionQuery";
 
 const Home = () => {
   return (
@@ -40,6 +41,7 @@ const Home = () => {
       <GridBackground>
         <CampusShowcase />
       </GridBackground>
+      <AdmissionQuery />
     </>
   );
 };

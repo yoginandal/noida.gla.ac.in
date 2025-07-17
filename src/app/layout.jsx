@@ -3,7 +3,7 @@ import { SiteHeader } from "@/header/site-header";
 import SiteFooter from "@/footer/site-footer";
 import "./globals.css";
 import Providers from "@/components/main/query-provider";
-import AdmissionQueryButton from "@/components/main/AdmissionQueryButton";
+import { Toaster } from "sonner";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,8 +19,8 @@ export default function RootLayout({ children }) {
         <Providers>
           <SiteHeader />
           <main>{children}</main>
-          <AdmissionQueryButton />
           <SiteFooter />
+          <Toaster position="top-right" richColors />
         </Providers>
       </body>
     </html>
