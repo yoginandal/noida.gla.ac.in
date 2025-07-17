@@ -25,6 +25,11 @@ const StudentPlaceholder = () => (
 
 // Student Card Component
 const StudentCard = ({ student, rank, isMobile }) => {
+  // Guard against undefined student
+  if (!student) {
+    return null;
+  }
+
   return (
     <Card className="border-0 bg-transparent overflow-hidden py-0 h-full shadow-[8px_8px_10px_rgba(0,0,0,0.5)]">
       <div className="relative h-[500px] w-full rounded-2xl overflow-hidden flex flex-col md:flex-row">

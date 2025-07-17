@@ -10,10 +10,10 @@ import FeeStructure from "./FeeStructure";
 import Scholarships from "./Scholarships";
 import Banner from "@/components/main/Banner";
 import CourseSelector from "./CourseSelector";
-import { courses } from "./data";
+import { courses } from "@/data/admissionData";
 
 export default function AdmissionPage() {
-  const [selectedCourse, setSelectedCourse] = useState(courses[0]);
+  const [selectedCourse, setSelectedCourse] = useState(courses?.[0] || null);
   const [activeTab, setActiveTab] = useState("procedure");
 
   const containerVariants = {

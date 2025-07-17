@@ -24,6 +24,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Ellipsis, ChevronRightIcon } from "lucide-react";
 import WordPullUp from "@/components/ui/word-pull-up";
+import React from "react";
 
 const ITEMS_TO_DISPLAY = 3;
 
@@ -58,9 +59,9 @@ const Banner = ({ title, image, breadcrumbItems = [], imageAlt }) => {
             {isDesktop ? (
               // Desktop view: show all breadcrumbs
               breadcrumbItems.map((item, index) => (
-                <BreadcrumbItem key={index}>
-                  {item.href ? (
-                    <>
+                <React.Fragment key={index}>
+                  <BreadcrumbItem>
+                    {item.href ? (
                       <BreadcrumbLink asChild className="">
                         <Link
                           href={item.href}
@@ -69,37 +70,39 @@ const Banner = ({ title, image, breadcrumbItems = [], imageAlt }) => {
                           {item.label}
                         </Link>
                       </BreadcrumbLink>
-                      {index < breadcrumbItems.length - 1 && (
-                        <BreadcrumbSeparator className="[&>svg]:w-5 [&>svg]:h-5 mt-1 text-white flex items-center justify-end">
-                          <ChevronRightIcon className="stroke-[3] w-full h-full" />
-                        </BreadcrumbSeparator>
-                      )}
-                    </>
-                  ) : (
-                    <BreadcrumbPage className="text-lg font-semibold text-slate-200">
-                      {item.label}
-                    </BreadcrumbPage>
+                    ) : (
+                      <BreadcrumbPage className="text-lg font-semibold text-slate-200">
+                        {item.label}
+                      </BreadcrumbPage>
+                    )}
+                  </BreadcrumbItem>
+                  {index < breadcrumbItems.length - 1 && (
+                    <BreadcrumbSeparator className="[&>svg]:w-5 [&>svg]:h-5 mt-1 text-white flex items-center justify-end">
+                      <ChevronRightIcon className="stroke-[3] w-full h-full" />
+                    </BreadcrumbSeparator>
                   )}
-                </BreadcrumbItem>
+                </React.Fragment>
               ))
             ) : (
               // Mobile view: show first, ellipsis, and last two
               <>
                 {breadcrumbItems.length > 0 && (
-                  <BreadcrumbItem className="text-white mobile-breadcrumb-item">
-                    <BreadcrumbLink asChild className="text-white">
-                      <Link
-                        href={breadcrumbItems[0].href}
-                        className="font-semibold text-white transition-colors duration-100 ease-in-out hover:text-slate-100"
-                      >
-                        {breadcrumbItems[0].label}
-                      </Link>
-                    </BreadcrumbLink>
-                  </BreadcrumbItem>
+                  <>
+                    <BreadcrumbItem className="text-white mobile-breadcrumb-item">
+                      <BreadcrumbLink asChild className="text-white">
+                        <Link
+                          href={breadcrumbItems[0].href}
+                          className="font-semibold text-white transition-colors duration-100 ease-in-out hover:text-slate-100"
+                        >
+                          {breadcrumbItems[0].label}
+                        </Link>
+                      </BreadcrumbLink>
+                    </BreadcrumbItem>
+                    {breadcrumbItems.length > 1 && <BreadcrumbSeparator />}
+                  </>
                 )}
                 {breadcrumbItems.length > ITEMS_TO_DISPLAY && (
                   <>
-                    <BreadcrumbSeparator />
                     <BreadcrumbItem>
                       <Drawer open={open} onOpenChange={setOpen}>
                         <DrawerTrigger aria-label="Toggle Menu">
@@ -131,24 +134,29 @@ const Banner = ({ title, image, breadcrumbItems = [], imageAlt }) => {
                         </DrawerContent>
                       </Drawer>
                     </BreadcrumbItem>
+                    <BreadcrumbSeparator />
                   </>
                 )}
-                {breadcrumbItems.slice(1).map((item, index) => (
-                  <BreadcrumbItem key={index} className="text-white">
-                    <BreadcrumbSeparator />
-                    {item.href ? (
-                      <BreadcrumbLink
-                        asChild
-                        className="truncate max-w-20 md:max-w-none text-white"
-                      >
-                        <Link href={item.href}>{item.label}</Link>
-                      </BreadcrumbLink>
-                    ) : (
-                      <BreadcrumbPage className="truncate max-w-20 md:max-w-none text-white">
-                        {item.label}
-                      </BreadcrumbPage>
+                {breadcrumbItems.slice(-2).map((item, index) => (
+                  <React.Fragment key={index}>
+                    <BreadcrumbItem className="text-white">
+                      {item.href ? (
+                        <BreadcrumbLink
+                          asChild
+                          className="truncate max-w-20 md:max-w-none text-white"
+                        >
+                          <Link href={item.href}>{item.label}</Link>
+                        </BreadcrumbLink>
+                      ) : (
+                        <BreadcrumbPage className="truncate max-w-20 md:max-w-none text-white">
+                          {item.label}
+                        </BreadcrumbPage>
+                      )}
+                    </BreadcrumbItem>
+                    {index < breadcrumbItems.slice(-2).length - 1 && (
+                      <BreadcrumbSeparator />
                     )}
-                  </BreadcrumbItem>
+                  </React.Fragment>
                 ))}
               </>
             )}

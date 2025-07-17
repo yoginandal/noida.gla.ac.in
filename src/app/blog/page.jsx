@@ -9,22 +9,51 @@ import Image from "next/image";
 import ClientOnly from "@/components/main/client-only";
 
 const fetchPosts = async (page) => {
-  const response = await fetch(
-    `https://noida.gla.ac.in/wordpress/wp-json/wp/v2/posts?_embed&page=${page}&per_page=9`
-  );
+  try {
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 10000); // 10 second timeout
 
-  if (!response.ok) {
-    throw new Error(`Error: ${response.status}`);
+    const response = await fetch(`/api/posts?page=${page}&per_page=9`, {
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      signal: controller.signal,
+    });
+
+    clearTimeout(timeoutId);
+
+    if (!response.ok) {
+      // Check for specific error status codes
+      if (response.status === 404) {
+        throw new Error("Blog posts not found");
+      } else if (response.status >= 500) {
+        throw new Error("Server error - please try again later");
+      } else {
+        throw new Error(`Error ${response.status}: ${response.statusText}`);
+      }
+    }
+
+    const data = await response.json();
+
+    // Check if we're using fallback data
+    if (data.fallback) {
+      console.warn("Using fallback blog data:", data.error);
+    }
+
+    return {
+      posts: data.posts,
+      totalPages: data.totalPages || 1,
+      fallback: data.fallback || false,
+    };
+  } catch (error) {
+    console.error("Failed to fetch posts:", error);
+    // If the API fails, return mock data or handle gracefully
+    if (error.name === "AbortError") {
+      throw new Error("Request timed out - please check your connection");
+    }
+    throw error;
   }
-
-  const data = await response.json();
-  const totalPosts = parseInt(response.headers.get("X-WP-Total") || "0", 10);
-  const totalPages = parseInt(
-    response.headers.get("X-WP-TotalPages") || "0",
-    10
-  );
-
-  return { posts: data, totalPages: totalPages };
 };
 
 const Blog = () => {
@@ -52,7 +81,24 @@ const Blog = () => {
     return (
       <section className="py-12 sm:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <p className="text-center text-red-500">Error fetching posts.</p>
+          <div className="text-center">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+              Unable to Load Blog Posts
+            </h2>
+            <p className="text-red-500 mb-6">
+              {error.message || "Error fetching posts."}
+            </p>
+            <button
+              onClick={() => window.location.reload()}
+              className="bg-cusGreen text-white px-6 py-2 rounded-lg hover:bg-cusGreen/80 transition-colors"
+            >
+              Try Again
+            </button>
+            <p className="text-gray-500 mt-4 text-sm">
+              If the problem persists, please check your internet connection or
+              try again later.
+            </p>
+          </div>
         </div>
       </section>
     );
@@ -85,6 +131,13 @@ const Blog = () => {
               Our latest blog
             </TextAnimate>
           </Heading>
+          {data?.fallback && (
+            <div className="mt-6 p-4 bg-yellow-50 border border-yellow-200 rounded-lg text-center">
+              <p className="text-yellow-800">
+                📝 Showing sample blog posts - External blog service is temporarily unavailable
+              </p>
+            </div>
+          )}
         </motion.div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {isLoading

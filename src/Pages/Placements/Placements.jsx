@@ -1,6 +1,6 @@
 import Banner from "@/components/main/Banner";
 import PremiumAchievementShowcase from "@/Pages/Placements/premium-achievement-showcase";
-import placementData from "@/Pages/Placements/placementData";
+import placementData from "@/data/placementData";
 import PlacementStats from "@/Pages/Placements/PlacementStats";
 import GridBackground from "@/components/ui/GridBackground";
 

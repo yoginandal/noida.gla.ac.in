@@ -1,18 +1,18 @@
 import { Calendar, GraduationCap, Users, Beaker, BookOpen } from "lucide-react";
 import Image from "next/image";
-import { HeroSection } from "./components/hero-section";
-import { ProgramDescription } from "./components/program-description";
-import { IndustryPartners } from "./components/industry-partners";
-import { ProgramOutcomes } from "./components/program-outcomes";
-import { EligibilitySection } from "./components/eligibility-section";
-import { CurriculumSection } from "./components/curriculum-section";
-import { BrochureSection } from "./components/brochure-section";
-import { CTASection } from "./components/cta-section";
+import { HeroSection } from "@/components/Programs/components/hero-section";
+import { ProgramDescription } from "@/components/Programs/components/program-description";
+import { IndustryPartners } from "@/components/Programs/components/industry-partners";
+import { ProgramOutcomes } from "@/components/Programs/components/program-outcomes";
+import { EligibilitySection } from "@/components/Programs/components/eligibility-section";
+import { CurriculumSection } from "@/components/Programs/components/curriculum-section";
+import { BrochureSection } from "@/components/Programs/components/brochure-section";
+import { CTASection } from "@/components/Programs/components/cta-section";
 import AdmissionStepper from "./Stepper";
-import { AnimationStyles } from "./components/animation-styles";
-import MBAPrograms from "./components/MBAPrograms";
-import CoreSpecializations from "./components/core-specializations";
-import LearningResources from "./components/LearningResources";
+import { AnimationStyles } from "@/components/Programs/components/animation-styles";
+import MBAPrograms from "@/components/Programs/components/MBAPrograms";
+import CoreSpecializations from "@/components/Programs/components/core-specializations";
+import LearningResources from "@/components/Programs/components/LearningResources";
 
 export function MBA() {
   const icons = [

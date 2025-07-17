@@ -1,4 +1,4 @@
-import { AIML } from "@/Pages/Programs/AIML";
+import { AIML } from "@/components/Programs/AIML";
 
 export const metadata = {
   title: "Join Btech in Artificial Intelligence Greater Noida - GLA Noida",

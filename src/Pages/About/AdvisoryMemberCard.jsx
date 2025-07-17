@@ -3,6 +3,11 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Mail, Building, MapPin } from "lucide-react";
 
 const AdvisoryMemberCard = ({ member, listView = false }) => {
+  // Guard against undefined member
+  if (!member) {
+    return null;
+  }
+
   // Use the image from the member object
   const imageUrl = member.image; // This will directly use the path from advisory-board-data.js
 

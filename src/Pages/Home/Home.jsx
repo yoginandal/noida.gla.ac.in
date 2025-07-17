@@ -1,5 +1,5 @@
 "use client";
-import { BannerSlider } from "./banner-slider";
+import { BannerSlider } from "@/components/Home/banner-slider";
 import LegacySection from "./legacy-section";
 import GridBackground from "@/components/ui/GridBackground";
 import RankingSection from "./Ranking";

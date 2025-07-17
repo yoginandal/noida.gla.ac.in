@@ -52,7 +52,7 @@ import { BrochureSection } from "./components/brochure-section";
 import { EventsSection } from "./components/events-section";
 import { CTASection } from "./components/cta-section";
 import { IndustryPartners } from "./components/industry-partners";
-import AdmissionStepper from "./Stepper";
+import AdmissionStepper from "@/Pages/Programs/Stepper";
 import { AnimationStyles } from "./components/animation-styles";
 import GridBackground from "@/components/ui/GridBackground";
 

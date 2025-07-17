@@ -9,7 +9,7 @@ import {
   BarElement,
   Title,
 } from "chart.js";
-import Section from "@/layout.jsx/section";
+import Section from "@/layouts/section";
 
 ChartJS.register(
   ArcElement,

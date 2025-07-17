@@ -1,9 +1,14 @@
 "use client";
 
-import { courses } from "./data";
+import { courses } from "@/data/admissionData";
 import { motion } from "framer-motion";
 
 export default function CourseSelector({ selectedCourse, setSelectedCourse }) {
+  // Guard against undefined data
+  if (!courses || !selectedCourse) {
+    return null;
+  }
+
   return (
     <div className="mb-12">
       <h2 className="text-3xl font-bold mb-12 text-center text-black">

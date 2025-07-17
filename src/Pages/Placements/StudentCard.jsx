@@ -1,6 +1,11 @@
 import { ExternalLink } from "lucide-react";
 
 export default function StudentCard({ student }) {
+  // Guard against undefined student
+  if (!student) {
+    return null;
+  }
+
   return (
     <div className="bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl border border-gray-100 flex flex-col h-full">
       <div className="relative">

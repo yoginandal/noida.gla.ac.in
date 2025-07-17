@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { admissionSteps } from "./data";
+import { admissionSteps } from "@/data/admissionData";
 
 export default function AdmissionProcedure() {
   const containerVariants = {

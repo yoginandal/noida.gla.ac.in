@@ -5,6 +5,11 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 
 export default function FeeStructure({ course }) {
+  // Guard against undefined course
+  if (!course) {
+    return null;
+  }
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
