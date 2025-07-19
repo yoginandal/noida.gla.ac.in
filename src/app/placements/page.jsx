@@ -1,4 +1,5 @@
 import Placements from "@/Pages/Placements/Placements";
+import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
 
 export const metadata = {
   title:
@@ -63,5 +64,10 @@ export const metadata = {
 };
 
 export default function Page() {
-  return <Placements />;
+  return (
+    <>
+      <BreadcrumbSchema />
+      <Placements />
+    </>
+  );
 }

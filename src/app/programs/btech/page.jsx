@@ -1,4 +1,5 @@
 import { BtechCS } from "@/Pages/Programs/BtechCS";
+import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
 
 export const metadata = {
   title: "BTech Computer Science Engineering - GLA University Greater Noida",
@@ -59,5 +60,31 @@ export const metadata = {
 };
 
 export default function Page() {
-  return <BtechCS />;
+  return (
+    <>
+      <BreadcrumbSchema
+        items={[
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Home",
+            item: "https://noida.gla.ac.in/",
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Programs",
+            item: "https://noida.gla.ac.in/programs",
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: "BTech",
+            item: "https://noida.gla.ac.in/programs/btech",
+          },
+        ]}
+      />
+      <BtechCS />
+    </>
+  );
 }

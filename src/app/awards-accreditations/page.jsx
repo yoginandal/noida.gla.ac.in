@@ -1,4 +1,5 @@
 import Awards from "@/Pages/About/Awards";
+import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
 
 export const metadata = {
   title: {
@@ -65,5 +66,10 @@ export const metadata = {
 };
 
 export default function Page() {
-  return <Awards />;
+  return (
+    <>
+      <BreadcrumbSchema />
+      <Awards />
+    </>
+  );
 }

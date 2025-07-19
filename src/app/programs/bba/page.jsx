@@ -1,4 +1,5 @@
 import { BBA } from "@/Pages/Programs/BBA";
+import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
 
 export const metadata = {
   title: "BBA Program - Top BBA Colleges in Noida with Fees - GLA University",
@@ -59,5 +60,10 @@ export const metadata = {
 };
 
 export default function Page() {
-  return <BBA />;
+  return (
+    <>
+      <BreadcrumbSchema />
+      <BBA />
+    </>
+  );
 }

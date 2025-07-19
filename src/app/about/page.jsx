@@ -1,4 +1,5 @@
 import About from "@/Pages/About/About";
+import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
 
 export const metadata = {
   title: "About GLA University Greater Noida - Top BTech College in Noida",
@@ -59,5 +60,10 @@ export const metadata = {
 };
 
 export default function Page() {
-  return <About />;
+  return (
+    <>
+      <BreadcrumbSchema />
+      <About />
+    </>
+  );
 }

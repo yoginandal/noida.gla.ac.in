@@ -1,4 +1,5 @@
 import AdvisoryBoard from "@/Pages/About/AdvisoryBoard";
+import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
 
 export const metadata = {
   title: "Advisory Board - GLA University Greater Noida",
@@ -59,5 +60,10 @@ export const metadata = {
 };
 
 export default function Page() {
-  return <AdvisoryBoard />;
+  return (
+    <>
+      <BreadcrumbSchema />
+      <AdvisoryBoard />
+    </>
+  );
 }

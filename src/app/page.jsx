@@ -1,4 +1,5 @@
 import Home from "@/Pages/Home/Home";
+import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
 
 export const metadata = {
   title: "Best Private University, Ranked #1 in UP",
@@ -65,5 +66,10 @@ export const metadata = {
 };
 
 export default function Page() {
-  return <Home />;
+  return (
+    <>
+      <BreadcrumbSchema />
+      <Home />
+    </>
+  );
 }

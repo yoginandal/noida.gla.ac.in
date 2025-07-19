@@ -1,4 +1,5 @@
 import { AIML } from "@/components/Programs/AIML";
+import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
 
 export const metadata = {
   title:
@@ -62,5 +63,10 @@ export const metadata = {
 };
 
 export default function Page() {
-  return <AIML />;
+  return (
+    <>
+      <BreadcrumbSchema />
+      <AIML />
+    </>
+  );
 }

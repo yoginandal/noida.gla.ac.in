@@ -1,4 +1,5 @@
 import Contact from "@/Pages/Contact/Contact";
+import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
 
 export const metadata = {
   title: "Contact GLA University Greater Noida - Get in Touch Today!",
@@ -59,5 +60,10 @@ export const metadata = {
 };
 
 export default function Page() {
-  return <Contact />;
+  return (
+    <>
+      <BreadcrumbSchema />
+      <Contact />
+    </>
+  );
 }
