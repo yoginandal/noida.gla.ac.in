@@ -81,7 +81,7 @@ export const metadata = {
     },
   },
   verification: {
-    google: "your-google-verification-code",
+    google: "KlAkUP22rErmeoo9R2nBRpHsxCZ8gC4kOBsq8uQPa_Q",
     yandex: "your-yandex-verification-code",
     yahoo: "your-yahoo-verification-code",
   },
@@ -96,6 +96,22 @@ export default function RootLayout({ children }) {
         <meta name="theme-color" content="#1e40af" />
         <meta name="msapplication-TileColor" content="#1e40af" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        {/* Google Analytics GA4 */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-E5DQKP7BMR"
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-E5DQKP7BMR');
+            `,
+          }}
+        />
 
         {/* Structured Data for Organization */}
         <script
