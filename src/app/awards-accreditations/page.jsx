@@ -1,7 +1,9 @@
 import Awards from "@/Pages/About/Awards";
 
 export const metadata = {
-  title: "GLA Greater Noida – Awards & Accreditations | Ranked Institute",
+  title: {
+    absolute: "GLA Greater Noida – Awards & Accreditations | Ranked Institute",
+  },
   description:
     "Discover the prestigious awards, accreditations, and rankings earned by GLA Greater Noida, recognized among the top engineering and management colleges in India.",
   keywords: [
