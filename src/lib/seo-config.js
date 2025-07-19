@@ -5,7 +5,7 @@ export const siteConfig = {
   name: "GLA University Greater Noida",
   url: "https://noida.gla.ac.in",
   description:
-    "GLA University Greater Noida offers top-ranked BTech, MBA, BCA, and BBA programs. Known for excellent placements, expert faculty, and industry-ready curriculum.",
+    "BTech College in Noida – GLA University, Ranked #1 in UP by Dainik Jagran, offers top management and tech courses.",
   ogImage: "/logo/logo.png",
   links: {
     facebook: "https://www.facebook.com/glauniversity",
@@ -24,10 +24,9 @@ export const siteConfig = {
 // Page-specific SEO configurations
 export const pageSEO = {
   home: {
-    title:
-      "GLA University Greater Noida - Top BTech, MBA, BCA, BBA College in Noida",
+    title: "Best Private University, Ranked #1 in UP",
     description:
-      "GLA University Greater Noida offers top-ranked BTech, MBA, BCA, and BBA programs. Known for excellent placements, expert faculty, and industry-ready curriculum. Apply now for 2025 admissions.",
+      "BTech College in Noida – GLA University, Ranked #1 in UP by Dainik Jagran, offers top management and tech courses.",
     keywords: [
       "GLA University",
       "GLA Greater Noida",
@@ -42,6 +41,9 @@ export const pageSEO = {
       "data science course",
       "placement college",
       "admissions 2025",
+      "Best Private University",
+      "Ranked #1 in UP",
+      "Dainik Jagran ranking",
     ],
     image: "/banner/banner_Image.webp",
   },
@@ -136,9 +138,9 @@ export const pageSEO = {
   },
 
   awards: {
-    title: "Awards & Accreditations - GLA University Greater Noida",
+    title: "GLA Greater Noida – Awards & Accreditations | Ranked Institute",
     description:
-      "Explore the prestigious awards and accreditations received by GLA University Greater Noida. NAAC A+ Grade, NBA accreditation, NIRF ranking, and recognition from top organizations showcase our commitment to excellence.",
+      "Discover the prestigious awards, accreditations, and rankings earned by GLA Greater Noida, recognized among the top engineering and management colleges in India.",
     keywords: [
       "GLA University awards",
       "GLA University accreditations",
@@ -152,6 +154,10 @@ export const pageSEO = {
       "quality education recognition",
       "GLA University achievements",
       "educational excellence awards",
+      "Ranked Institute",
+      "top engineering college",
+      "top management college",
+      "Dainik Jagran ranking",
     ],
     image: "/about/awards/awards-banner.webp",
   },

@@ -1,10 +1,9 @@
 import Home from "@/Pages/Home/Home";
 
 export const metadata = {
-  title:
-    "GLA University Greater Noida - Top BTech, MBA, BCA, BBA College in Noida",
+  title: "Best Private University, Ranked #1 in UP",
   description:
-    "GLA University Greater Noida offers top-ranked BTech, MBA, BCA, and BBA programs. Known for excellent placements, expert faculty, and industry-ready curriculum. Apply now for 2025 admissions.",
+    "BTech College in Noida – GLA University, Ranked #1 in UP by Dainik Jagran, offers top management and tech courses.",
   keywords: [
     "GLA University",
     "GLA Greater Noida",
@@ -19,6 +18,9 @@ export const metadata = {
     "data science course",
     "placement college",
     "admissions 2025",
+    "Best Private University",
+    "Ranked #1 in UP",
+    "Dainik Jagran ranking",
     "engineering college in Greater Noida",
     "management college in Noida",
   ],
@@ -26,10 +28,9 @@ export const metadata = {
     canonical: "/",
   },
   openGraph: {
-    title:
-      "GLA University Greater Noida - Top BTech, MBA, BCA, BBA College in Noida",
+    title: "Best Private University, Ranked #1 in UP",
     description:
-      "GLA University Greater Noida offers top-ranked BTech, MBA, BCA, and BBA programs. Known for excellent placements, expert faculty, and industry-ready curriculum.",
+      "BTech College in Noida – GLA University, Ranked #1 in UP by Dainik Jagran, offers top management and tech courses.",
     url: "https://noida.gla.ac.in",
     siteName: "GLA University Greater Noida",
     images: [
@@ -45,10 +46,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title:
-      "GLA University Greater Noida - Top BTech, MBA, BCA, BBA College in Noida",
+    title: "Best Private University, Ranked #1 in UP",
     description:
-      "GLA University Greater Noida offers top-ranked BTech, MBA, BCA, and BBA programs. Known for excellent placements, expert faculty, and industry-ready curriculum.",
+      "BTech College in Noida – GLA University, Ranked #1 in UP by Dainik Jagran, offers top management and tech courses.",
     images: ["/banner/banner_Image.webp"],
   },
   robots: {

@@ -1,9 +1,9 @@
 import Awards from "@/Pages/About/Awards";
 
 export const metadata = {
-  title: "Awards & Accreditations - GLA University Greater Noida",
+  title: "GLA Greater Noida – Awards & Accreditations | Ranked Institute",
   description:
-    "Explore the prestigious awards and accreditations received by GLA University Greater Noida. NAAC A+ Grade, NBA accreditation, NIRF ranking, and recognition from top organizations showcase our commitment to excellence.",
+    "Discover the prestigious awards, accreditations, and rankings earned by GLA Greater Noida, recognized among the top engineering and management colleges in India.",
   keywords: [
     "GLA University awards",
     "GLA University accreditations",
@@ -17,6 +17,10 @@ export const metadata = {
     "quality education recognition",
     "GLA University achievements",
     "educational excellence awards",
+    "Ranked Institute",
+    "top engineering college",
+    "top management college",
+    "Dainik Jagran ranking",
   ],
   alternates: {
     canonical: "/awards-accreditations",
@@ -40,9 +44,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Awards & Accreditations - GLA University Greater Noida",
+    title: "GLA Greater Noida – Awards & Accreditations | Ranked Institute",
     description:
-      "Explore the prestigious awards and accreditations received by GLA University Greater Noida. NAAC A+ Grade, NBA accreditation, and NIRF ranking.",
+      "Discover the prestigious awards, accreditations, and rankings earned by GLA Greater Noida, recognized among the top engineering and management colleges in India.",
     images: ["/about/awards/awards-banner.webp"],
   },
   robots: {

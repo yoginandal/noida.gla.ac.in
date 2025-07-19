@@ -28,6 +28,9 @@ export const metadata = {
     "data science course",
     "placement college",
     "admissions 2025",
+    "Best Private University",
+    "Ranked #1 in UP",
+    "Dainik Jagran ranking",
   ],
   authors: [{ name: "GLA University" }],
   creator: "GLA University",
@@ -46,10 +49,9 @@ export const metadata = {
     locale: "en_US",
     url: "https://noida.gla.ac.in",
     siteName: "GLA University Greater Noida",
-    title:
-      "GLA University Greater Noida - Top BTech, MBA, BCA, BBA College in Noida",
+    title: "Best Private University, Ranked #1 in UP",
     description:
-      "GLA University Greater Noida offers top-ranked BTech, MBA, BCA, and BBA programs. Known for excellent placements, expert faculty, and industry-ready curriculum.",
+      "BTech College in Noida – GLA University, Ranked #1 in UP by Dainik Jagran, offers top management and tech courses.",
     images: [
       {
         url: "/logo/logo.png",
@@ -61,10 +63,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title:
-      "GLA University Greater Noida - Top BTech, MBA, BCA, BBA College in Noida",
+    title: "Best Private University, Ranked #1 in UP",
     description:
-      "GLA University Greater Noida offers top-ranked BTech, MBA, BCA, and BBA programs. Known for excellent placements, expert faculty, and industry-ready curriculum.",
+      "BTech College in Noida – GLA University, Ranked #1 in UP by Dainik Jagran, offers top management and tech courses.",
     images: ["/logo/logo.png"],
     creator: "@glauniversity",
   },
@@ -107,7 +108,7 @@ export default function RootLayout({ children }) {
               url: "https://noida.gla.ac.in",
               logo: "https://noida.gla.ac.in/logo/logo.png",
               description:
-                "GLA University Greater Noida offers top-ranked BTech, MBA, BCA, and BBA programs with excellent placements and industry-ready curriculum.",
+                "BTech College in Noida – GLA University, Ranked #1 in UP by Dainik Jagran, offers top management and tech courses.",
               address: {
                 "@type": "PostalAddress",
                 streetAddress: "17km Stone, NH-2, Mathura-Delhi Road",
