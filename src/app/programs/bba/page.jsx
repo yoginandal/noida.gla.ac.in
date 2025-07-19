@@ -20,7 +20,7 @@ export const metadata = {
     "business management course",
   ],
   alternates: {
-    canonical: "/programs/bba",
+    canonical: "https://noida.gla.ac.in/programs/bba",
   },
   openGraph: {
     title: "BBA Program - Top BBA Colleges in Noida with Fees - GLA University",

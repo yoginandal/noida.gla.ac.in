@@ -26,7 +26,7 @@ export const metadata = {
     "Dainik Jagran ranking",
   ],
   alternates: {
-    canonical: "/awards-accreditations",
+    canonical: "https://noida.gla.ac.in/awards-accreditations",
   },
   openGraph: {
     title: "GLA Greater Noida – Awards & Accreditations | Ranked Institute",

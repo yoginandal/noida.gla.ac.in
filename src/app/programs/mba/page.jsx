@@ -21,7 +21,7 @@ export const metadata = {
     "management education",
   ],
   alternates: {
-    canonical: "/programs/mba",
+    canonical: "https://noida.gla.ac.in/programs/mba",
   },
   openGraph: {
     title:

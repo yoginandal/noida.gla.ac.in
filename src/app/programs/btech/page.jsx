@@ -2,30 +2,32 @@ import { BtechCS } from "@/Pages/Programs/BtechCS";
 import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
 
 export const metadata = {
-  title: "BTech Computer Science Engineering - GLA University Greater Noida",
+  title:
+    "BTech in Computer Science - Top Engineering College in Noida - GLA University",
   description:
-    "Join GLA University Greater Noida for BTech in Computer Science Engineering - Top ranked college for BTech in CSE in Greater Noida. Industry-ready curriculum, expert faculty, and excellent placements.",
+    "BTech in Computer Science at GLA University Greater Noida, a top engineering college in Noida with comprehensive fee details. Industry-ready curriculum, expert faculty, and excellent placements. Call +91-5662-250900 for admission info.",
   keywords: [
-    "BTech CSE",
-    "BTech in Computer Science",
-    "top BTech college in Noida",
-    "best BTech college in Noida",
-    "BTech in Computer Science & Engineering",
-    "Computer Science Engineering",
-    "engineering college in Greater Noida",
-    "BTech CSE admission 2025",
-    "computer science course",
-    "engineering degree",
-    "software engineering course",
-    "IT engineering college",
+    "BTech in Computer Science Greater Noida",
+    "BTech college in Greater Noida",
+    "BTech college in Greater Noida with fees",
+    "BTech program",
+    "Bachelor of Technology",
+    "BTech admission 2025",
+    "computer science engineering",
+    "engineering course",
+    "BTech in Greater Noida",
+    "best engineering college",
+    "BTech placement",
+    "computer science degree",
   ],
   alternates: {
-    canonical: "/programs/btech",
+    canonical: "https://noida.gla.ac.in/programs/btech",
   },
   openGraph: {
-    title: "BTech Computer Science Engineering - GLA University Greater Noida",
+    title:
+      "BTech in Computer Science - Top Engineering College in Noida - GLA University",
     description:
-      "Join GLA University Greater Noida for BTech in Computer Science Engineering - Top ranked college for BTech in CSE in Greater Noida.",
+      "BTech in Computer Science at GLA University Greater Noida, a top engineering college in Noida with comprehensive fee details. Industry-ready curriculum and expert faculty.",
     url: "https://noida.gla.ac.in/programs/btech",
     siteName: "GLA University Greater Noida",
     images: [
@@ -33,7 +35,7 @@ export const metadata = {
         url: "/programs/HeroBtechCse.png",
         width: 1200,
         height: 630,
-        alt: "BTech Computer Science Engineering at GLA University",
+        alt: "BTech in Computer Science at GLA University",
       },
     ],
     locale: "en_US",
@@ -41,9 +43,10 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "BTech Computer Science Engineering - GLA University Greater Noida",
+    title:
+      "BTech in Computer Science - Top Engineering College in Noida - GLA University",
     description:
-      "Join GLA University Greater Noida for BTech in Computer Science Engineering - Top ranked college for BTech in CSE.",
+      "BTech in Computer Science at GLA University Greater Noida, a top engineering college in Noida with comprehensive fee details.",
     images: ["/programs/HeroBtechCse.png"],
   },
   robots: {
@@ -62,28 +65,7 @@ export const metadata = {
 export default function Page() {
   return (
     <>
-      <BreadcrumbSchema
-        items={[
-          {
-            "@type": "ListItem",
-            position: 1,
-            name: "Home",
-            item: "https://noida.gla.ac.in/",
-          },
-          {
-            "@type": "ListItem",
-            position: 2,
-            name: "Programs",
-            item: "https://noida.gla.ac.in/programs",
-          },
-          {
-            "@type": "ListItem",
-            position: 3,
-            name: "BTech",
-            item: "https://noida.gla.ac.in/programs/btech",
-          },
-        ]}
-      />
+      <BreadcrumbSchema />
       <BtechCS />
     </>
   );

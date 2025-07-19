@@ -21,7 +21,7 @@ export const metadata = {
     "computer applications degree",
   ],
   alternates: {
-    canonical: "/programs/bca",
+    canonical: "https://noida.gla.ac.in/programs/bca",
   },
   openGraph: {
     title:

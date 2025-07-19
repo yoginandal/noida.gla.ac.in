@@ -42,7 +42,7 @@ export const metadata = {
   },
   metadataBase: new URL("https://noida.gla.ac.in"),
   alternates: {
-    canonical: "/",
+    canonical: "https://noida.gla.ac.in/",
   },
   openGraph: {
     type: "website",

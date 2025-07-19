@@ -20,7 +20,7 @@ export const metadata = {
     "best college in Greater Noida",
   ],
   alternates: {
-    canonical: "/about",
+    canonical: "https://noida.gla.ac.in/about",
   },
   openGraph: {
     title: "About GLA University Greater Noida - Top BTech College in Noida",

@@ -20,7 +20,7 @@ export const metadata = {
     "expert committee",
   ],
   alternates: {
-    canonical: "/advisory-board",
+    canonical: "https://noida.gla.ac.in/advisory-board",
   },
   openGraph: {
     title: "Advisory Board - GLA University Greater Noida",

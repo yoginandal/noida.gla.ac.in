@@ -23,7 +23,7 @@ export const metadata = {
     "engineering admission 2025",
   ],
   alternates: {
-    canonical: "/admissions",
+    canonical: "https://noida.gla.ac.in/admissions",
   },
   openGraph: {
     title:

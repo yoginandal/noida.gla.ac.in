@@ -21,7 +21,7 @@ export const metadata = {
     "AI ML program",
   ],
   alternates: {
-    canonical: "/programs/aiml",
+    canonical: "https://noida.gla.ac.in/programs/aiml",
   },
   openGraph: {
     title:

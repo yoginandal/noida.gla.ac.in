@@ -26,7 +26,7 @@ export const metadata = {
     "management college in Noida",
   ],
   alternates: {
-    canonical: "/",
+    canonical: "https://noida.gla.ac.in/",
   },
   openGraph: {
     title: "Best Private University, Ranked #1 in UP",

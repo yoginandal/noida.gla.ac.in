@@ -22,7 +22,7 @@ export const metadata = {
     "placement cell GLA",
   ],
   alternates: {
-    canonical: "/placements",
+    canonical: "https://noida.gla.ac.in/placements",
   },
   openGraph: {
     title:

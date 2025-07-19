@@ -20,7 +20,7 @@ export const metadata = {
     "college contact information",
   ],
   alternates: {
-    canonical: "/contact-us",
+    canonical: "https://noida.gla.ac.in/contact-us",
   },
   openGraph: {
     title: "Contact GLA University Greater Noida - Get in Touch Today!",
