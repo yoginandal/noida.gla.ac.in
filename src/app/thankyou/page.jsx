@@ -3,9 +3,55 @@
 import Head from "next/head";
 import Image from "next/image";
 
+// SEO Metadata for Thank You Page
+const ThankYouSEO = () => (
+  <Head>
+    <title>Thank You - GLA University Greater Noida</title>
+    <meta
+      name="description"
+      content="Thank you for your registration with GLA University Greater Noida. We will get in touch with you soon regarding your admission enquiry for BTech, MBA, BCA, or BBA programs."
+    />
+    <meta
+      name="keywords"
+      content="thank you GLA University, registration successful, admission enquiry, GLA University contact, application submitted"
+    />
+    <link rel="canonical" href="https://noida.gla.ac.in/thankyou" />
+
+    {/* Open Graph */}
+    <meta
+      property="og:title"
+      content="Thank You - GLA University Greater Noida"
+    />
+    <meta
+      property="og:description"
+      content="Thank you for your registration with GLA University Greater Noida. We will get in touch with you soon regarding your admission enquiry."
+    />
+    <meta property="og:url" content="https://noida.gla.ac.in/thankyou" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/logo/logo.png" />
+    <meta property="og:site_name" content="GLA University Greater Noida" />
+
+    {/* Twitter */}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Thank You - GLA University Greater Noida"
+    />
+    <meta
+      name="twitter:description"
+      content="Thank you for your registration with GLA University Greater Noida."
+    />
+    <meta name="twitter:image" content="/logo/logo.png" />
+
+    {/* Robots */}
+    <meta name="robots" content="noindex, nofollow" />
+  </Head>
+);
+
 export default function ThankYouPage() {
   return (
     <>
+      <ThankYouSEO />
       <Head>
         <title>Thank You - GLA University</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -250,11 +296,24 @@ export default function ThankYouPage() {
         }
         @keyframes bounce-subtle {
           0%,
+          20%,
+          53%,
+          80%,
           100% {
-            transform: translateY(0);
+            animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+            transform: translate3d(0, 0, 0);
           }
-          50% {
-            transform: translateY(-10px);
+          40%,
+          43% {
+            animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+            transform: translate3d(0, -30px, 0);
+          }
+          70% {
+            animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+            transform: translate3d(0, -15px, 0);
+          }
+          90% {
+            transform: translate3d(0, -4px, 0);
           }
         }
         @keyframes draw {

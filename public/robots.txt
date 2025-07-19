@@ -1,0 +1,55 @@
+User-agent: *
+Allow: /
+
+# Allow all major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+# Disallow admin and private areas
+Disallow: /api/
+Disallow: /admin/
+Disallow: /private/
+Disallow: /thankyou
+
+# Allow important directories
+Allow: /programs/
+Allow: /about/
+Allow: /admissions/
+Allow: /placements/
+Allow: /contact-us/
+Allow: /blog/
+Allow: /awards-accreditations/
+Allow: /advisory-board/
+
+# Allow static assets
+Allow: /logo/
+Allow: /banner/
+Allow: /general/
+Allow: /about/
+Allow: /placement/
+Allow: /admission/
+Allow: /programs/
+Allow: /news/
+Allow: /photos/
+Allow: /icons/
+
+# Sitemap location
+Sitemap: https://noida.gla.ac.in/sitemap.xml
+
+# Crawl delay (optional - be respectful to server)
+Crawl-delay: 1 
